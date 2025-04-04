@@ -1,0 +1,31 @@
+These scripts were used for a paper, entitled 'Genomic Analysis Reveals Annual Variation in the Migratory Pathways to East Asia in the Brown Planthopper (Nilaparvata lugens)' , co-authored by Nak Jung Choi, In-Jeong Kang, and Kiwoong Nam.
+
+#Variant
+vcffiltering.sh: Filtering of vcf files
+vcf2plink.sh: File conversion from vcf to plink
+
+#PCA
+PCA.sh: running plink2 for PCA
+mergetable.R: Including sample information to eigenvectors
+visRes.R: visualization of PCA result
+
+#Fst calculation
+fst_bg.sh: Calculating Fst using vcftools
+visFstp.R: visualization of above (global)
+visFst.R: visualization of above (windowed)
+positiveFSTcountwindow.pl: Calculating the proportion of windows with Fst > 0
+fst_boot.pl: Calculating Fst from random pairs
+collect_fst_boot.sh: collect the Fst results from the above
+
+input.pl: File format conversion for hierfstat
+input.pval.pl: File format conversion for hierfstat for statistical test
+input_names.R: Preparing a table for sample information
+hierfstat.EXE.R: Executing hierfstat
+hierfstat.EXE.test.R: Testing statistical significance of hierarchical Fst
+
+#Ancestroy coefficient analysis
+prep.sh: preparation of input files for sNMF
+exec.sh: Running sNMF
+vis.R: Visualization of above
+collectCV.sh : Collecting Cross-Entropy calculates
+
