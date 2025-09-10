@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd /home/kiwoong/Projects/Nlugens_GBS/FST/rand
+cd /home/knam/work/Nlugens_GBS/Revision/FST/rand
 
-grep weighted r* | sed 's/^.* //' > ../randfst.txt
+grep weighted s* | sed 's/^.* //' > ../randfst.txt
 
+wc -l ../randfst.txt

@@ -1,8 +1,8 @@
 These scripts were used for a paper, entitled 'Genomic Analysis Reveals Annual Variation in the Migratory Pathways to East Asia in the Brown Planthopper (Nilaparvata lugens)' , co-authored by Nak Jung Choi, In-Jeong Kang, and Kiwoong Nam.
 
-#Variant
-vcffiltering.sh: Filtering of vcf files
-vcf2plink.sh: File conversion from vcf to plink
+#Variant filtering
+vcfgatkfiltering.sh: Variant filtering using gatk
+vcfmissingfiltering.sh: Variant filtering according to the missing data
 
 #PCA
 PCA.sh: running plink2 for PCA
@@ -16,16 +16,37 @@ visFst.R: visualization of above (windowed)
 positiveFSTcountwindow.pl: Calculating the proportion of windows with Fst > 0
 fst_boot.pl: Calculating Fst from random pairs
 collect_fst_boot.sh: collect the Fst results from the above
+meanSNV.pl: Count the number of SNPs within windows
 
 input.pl: File format conversion for hierfstat
 input.pval.pl: File format conversion for hierfstat for statistical test
 input_names.R: Preparing a table for sample information
-hierfstat.EXE.R: Executing hierfstat
-hierfstat.EXE.test.R: Testing statistical significance of hierarchical Fst
+hierfstat.EXE.R: Calculation of hierarchical Fst
+hierfstat.EXE.test1.R: Testing statistical significance of hierarchical Fst between sampling countries
+hierfstat.EXE.test2.R: Testing statistical significance of hierarchical Fst between sampling years
 
 #Ancestroy coefficient analysis
 prep.sh: preparation of input files for sNMF
 exec.sh: Running sNMF
 vis.R: Visualization of above
 collectCV.sh : Collecting Cross-Entropy calculates
+
+#SweeD
+prepvcf.sh: Preparation of vcf file for Sweed
+vcfsplit.sh: split of VCF file for SweeD parallel running
+sweed/*: Execution of SweeD
+collec.res.pl: collecting SweeD results
+SweeD.vis.R: Visualization of SweeD result
+
+#TreeMix
+outgroup.fq.sh: Downloading outgroup fastq files and trimming of the reads
+outgroup.refIndex.sh: Indexing of BHP reference genome assembly
+outgroup.mapping.sh: mapping of the outgroup fastq files
+outgroup.variantcalling.sh: Variant calling for the outgroup species
+outgroup.variantfiltering.sh: Variant filtering for the outgroup species
+outgroup.cleanup.sh: Clean up the space
+vcf.mergevcf.sh: Merging of the vcf file of BHP and the outgroup
+treemix.input.sh: Generating TreeMix input file using the scripts in the rQ directory
+treemix.exec.sh: Running TreeMix
+TreeMix.vis.R: Visualization of TreeMix result
 

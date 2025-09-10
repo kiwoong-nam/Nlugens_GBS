@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH --mem=20G
+
+module load bioinfo/SweeD/4.0.0
+
+cd /home/knam/work/Nlugens_GBS/Revision/SweeD/res
+	
+SweeD -name P2.2 -input /home/knam/work/Nlugens_GBS/Revision/SweeD/vcf/P2.2.vcf -grid 10
+

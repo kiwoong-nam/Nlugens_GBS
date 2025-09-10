@@ -1,6 +1,7 @@
 use strict;
 
-my $input="/home/kiwoong/Projects/Nlugens_GBS/FST/bg.windowed.weir.fst";
+my $input="/home/knam/work/Nlugens_GBS/Revision/FST/bg.windowed.weir.fst";
+my $output="/home/knam/work/Nlugens_GBS/Revision/FST/bg.fsthigherthanzero.txt";
 
 my $prechr='d';
 my @FSTs;
@@ -30,13 +31,15 @@ while(<$fd>)
 	}
 }
 
-my $res="total\t".ck(@FSTs)."\nAuto\t".ck(@FSTs_A)."\nX\t".ck(@FSTs_X)."\nY\t".ck(@FSTs_Y)."\n";
+my $res="total\t".ck(@FSTs);#."\nAuto\t".ck(@FSTs_A)."\nX\t".ck(@FSTs_X)."\nY\t".ck(@FSTs_Y)."\n";
 
-print $res;
+open my $fd,">$output";
+print $fd $res;
+close $fd;
+
 sub ck
 {
 	(my @val)=(@_);
-	
 	my $ps=0;
 	my $ns=0;
 	foreach my $f (@val)

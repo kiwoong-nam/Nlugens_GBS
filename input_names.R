@@ -1,5 +1,5 @@
 v.s=read.table('/home/kiwoong/Projects/Nlugens_GBS/sample/sample_ID',h=T,sep="\t")
-v.n=read.table('/home/kiwoong/Projects/Nlugens_GBS/PCA/BPH454.eigenvec')
+v.n=read.table('/home/kiwoong/Projects/Nlugens_GBS/Revision/PCA/BPH454_0.5.eigenvec')
 v.n$OR=c(1:nrow(v.n))
 
 v.ns=v.n[c(1,13)]
@@ -11,7 +11,7 @@ vo=v[order(v$OR),]
 lev=vo[c(3:5)]
 colnames(lev)=c('lev1','lev2','lev3')
 
-write.table(lev,'/home/kiwoong/Projects/Nlugens_GBS/hierfst/input/sample.txt',row.names=F,quote=F)
+write.table(lev,'/home/kiwoong/Projects/Nlugens_GBS/Revision/hierfst/input/sample.txt',row.names=F,quote=F)
  
 
 

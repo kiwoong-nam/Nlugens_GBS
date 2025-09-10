@@ -1,7 +1,7 @@
 use strict;
 
-my $input='/home/kiwoong/Projects/Nlugens_GBS/SNV/BPH454_0.4.vcf.gz';
-my $output='/home/kiwoong/Projects/Nlugens_GBS/hierfst/input/geno_test.txt';
+my $input='/home/kiwoong/Projects/Nlugens_GBS/Revision/SNV/BPH454_0.5.vcf.gz';
+my $output='/home/kiwoong/Projects/Nlugens_GBS/Revision/hierfst/input/geno_test.txt';
 
 my @geno;
 my $j=0;
